@@ -18,12 +18,12 @@ namespace WindowsFormsApplicationSpeech
         {
             deaf C = new deaf(textBox1.Text, textBox2.Text);
             DataTable d = C.getDeafId();
-           
+
             if (C.login())
             {
-           
-                
-               // MessageBox.Show("LOGIN Done");
+
+
+                // MessageBox.Show("LOGIN Done");
                 this.Hide();
                 deafPage ss = new deafPage();
                 ss.Closed += (s, args) => this.Close();
@@ -86,9 +86,9 @@ namespace WindowsFormsApplicationSpeech
             {
                 MessageBox.Show("Please check you Username and Password");
             }
-          
-               
-            
+
+
+
         }
 
         private void FrmLogin_Load(object sender, EventArgs e)
