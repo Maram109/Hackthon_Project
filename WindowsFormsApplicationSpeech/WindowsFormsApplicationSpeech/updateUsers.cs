@@ -75,7 +75,7 @@ namespace WindowsFormsApplicationSpeech.Class
 
                 panel1.Visible = true;
                 panel3.Visible = false;
-               
+
             }
             else
             {

@@ -16,8 +16,8 @@ namespace WindowsFormsApplicationSpeech
 {
     public partial class updeatDeaf : Form
     {
-        
-        
+
+
         public updeatDeaf()
         {
             InitializeComponent();
@@ -34,8 +34,8 @@ namespace WindowsFormsApplicationSpeech
             deaf d = new deaf(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text);
             d.updateDeaf();
             MessageBox.Show("The Deaf  information is Updated");
-            
-          
+
+
             textBox1.Enabled = true;
             textBox1.Text = "";  //empty id text
             textBox2.Text = "";  // empty name text
@@ -48,7 +48,7 @@ namespace WindowsFormsApplicationSpeech
 
 
         }
-       
+
         //log out button
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
@@ -68,7 +68,7 @@ namespace WindowsFormsApplicationSpeech
             SqlCommand cmd = new SqlCommand(sql, con);
             SqlDataReader dr = cmd.ExecuteReader();
 
-       
+
 
 
 
@@ -79,16 +79,16 @@ namespace WindowsFormsApplicationSpeech
         {
             DataTable dt;
 
-            deaf d= new deaf(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text);
+            deaf d = new deaf(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text);
             //deaf d = new deaf(textBox1.Text);
- 
-             dt = d.UpdateExssisDeaf();
+
+            dt = d.UpdateExssisDeaf();
             //DataTable s = d.getDeafName();
             if (dt != null)
             {
                 MessageBox.Show("is Exite");
 
-              textBox2.Text = dt.Rows[0]["name"].ToString();
+                textBox2.Text = dt.Rows[0]["name"].ToString();
                 //textBox2.Text = s.ToString();
                 //textBox2.Text = dt.Rows[0]["name"].ToString();
                 textBox3.Text = dt.Rows[0]["email"].ToString();
